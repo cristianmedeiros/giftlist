@@ -1,0 +1,54 @@
+body{
+	
+	font-family:tahoma,verdana,arial,sans-serif;
+	font-size:16pt;
+	color:#666666;
+}
+
+h5 {
+	font-size: 9pt;
+	font-color:#EEEEEE;
+	font-weight:normal;
+	padding: 0;
+	margin: 0;
+}
+
+#gifts a{
+	text-decoration:none;
+	color:#333333;
+	display: block;
+	margin: 0 auto;
+}
+
+#gifts .category{
+	padding:10px;
+	margin:10px 0;
+	background-color:#fce5e0;
+}
+
+#gifts .gift{
+	height:97px;
+	/*margin-left:15px;*/
+}
+
+#gifts .gift:hover{
+	background-color:#f9c9d9;
+}
+
+#gifts .gift .content{
+	float:left;
+	padding: 0 15px;
+	margin-right:15px;	
+	width:750px;
+}
+
+#gifts .gift .content:hover{
+	background-color: #fce0e9;
+	height:97px;
+
+}
+
+#gifts .gift .action{
+	float:left;
+	width:50px;
+}

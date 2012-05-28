@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title><?php echo ($_html_title=F3::get('html_title')); ?></title>
+      <meta charset='utf8' />
+	  
+	  <link href="ui/css/style.css" rel="stylesheet" type="text/css" />
+	  
+ 	  <script src="ui/js/jquery-1.7.2.min.js"></script>
+ 	  <script src="ui/js/functions.js"></script>
+
+   </head>
+   <body>
+      <p>Chá de Bebê da Julia</p>
+<h5>17 de Junho, 15 horas</h5>
+<h5>R. Prof. Guilherme Belfort Sabino, 1524 (<a href="https://maps.google.com/maps?q=R.+Prof.+Guilherme+Belfort+Sabino,+1524+-+Campo+Grande,+S%C3%A3o+Paulo+-+S%C3%A3o+Paulo,+Brasil&hl=en&ie=UTF8&sll=37.0625,-95.677068&sspn=35.631106,78.310547&oq=rua+prof&hnear=R.+Prof.+Guilherme+Belfort+Sabino,+1524+-+Campo+Grande,+S%C3%A3o+Paulo,+04678-002,+Brazil&t=m&z=16" target="_blank">mapa</a>)</h5>
+<h5>Salão de Festas</h5>
+<p>Amigos e parentes, a Julia esta para chegar e vamos fazer o chá de bebê dela, como sugestão montamos a lista a baixo, por favor, cliquem em "comprei" se escolherem algum item da lista. Obrigado a todos.</p>
+<div id="gifts">
+	
+	<?php if (is_array(($_list=F3::get('list')))):foreach ((($_list=F3::get('list'))?:array()) as $_categoria=>$_gifts):?>
+	<div class="category"><?php echo $_categoria; ?></div>
+		<?php if (is_array($_gifts)):foreach (($_gifts?:array()) as $_id=>$_item):?>
+		<div class="gift">
+			<div class="content">
+			<p><span><?php echo trim($_item); ?></span></p></div>  <div class="action"><p><a href="#" id="<?php echo $_id; ?>" class="buy">comprei</a></p></div>
+		</div>
+		<?php endforeach;endif;?>	
+	<?php endforeach;endif;?>
+<!--view/<?php echo F3::get('item[\'id\']'); ?>-->
+</div>
+   </body>
+</html>

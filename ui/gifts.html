@@ -1,0 +1,18 @@
+<p>Chá de Bebê da Julia</p>
+<h5>24 de Junho, 15 horas</h5>
+<h5>R. Prof. Guilherme Belfort Sabino, 1524 (<a href="https://maps.google.com/maps?q=R.+Prof.+Guilherme+Belfort+Sabino,+1524+-+Campo+Grande,+S%C3%A3o+Paulo+-+S%C3%A3o+Paulo,+Brasil&hl=en&ie=UTF8&sll=37.0625,-95.677068&sspn=35.631106,78.310547&oq=rua+prof&hnear=R.+Prof.+Guilherme+Belfort+Sabino,+1524+-+Campo+Grande,+S%C3%A3o+Paulo,+04678-002,+Brazil&t=m&z=16" target="_blank">mapa</a>)</h5>
+<h5>Salão de Festas</h5>
+<p>Amigos e parentes, a Julia esta para chegar e vamos fazer o chá de bebê dela, como sugestão montamos a lista a baixo, por favor, cliquem em "comprei" se escolherem algum item da lista. Obrigado a todos.</p>
+<div id="gifts">
+	
+	<F3:repeat group="{{@list}}" key="{{@categoria}}" value="{{@gifts}}">
+	<div class="category">{{@categoria}}</div>
+		<F3:repeat group="{{@gifts}}" key="{{@id}}" value="{{@item}}">
+		<div class="gift">
+			<div class="content">
+			<p><span>{{trim(@item)}}</span></p></div>  <div class="action"><p><a href="javascript:void(0)" id="{{@id}}" class="buy">comprei</a></p></div>
+		</div>
+		</F3:repeat>	
+	</F3:repeat>
+<!--view/{{@item['id']}}-->
+</div>

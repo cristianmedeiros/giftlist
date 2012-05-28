@@ -1,0 +1,5 @@
+<p>Blog Titles</p>
+<F3:repeat group="{{@list}}" value="{{@item}}">
+	<p><a href="view/{{@item['id']}}">{{trim(@item['title'])}}</a> by {{@item['author']}}</p>
+	<p>{{@item['summary']}}</p>
+</F3:repeat>
